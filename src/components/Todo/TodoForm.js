@@ -6,7 +6,6 @@ import cssClass from "./TodoForm.module.css";
 
 const TodoForm = () => {
   const [inputValue, inputValueHandler] = useState([]);
-  const deleteItem = (array) => {inputValueHandler(array)};
   let inputChange;
   const submitHandler = (event) => {
     event.preventDefault();
@@ -20,7 +19,7 @@ const TodoForm = () => {
     }
      
   };
-  
+  const deleteItem = (array) => {inputValueHandler(array)};
   return (
     <Card>
       <form onSubmit={submitHandler}>
